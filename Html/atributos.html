@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Atributos HTML</title>
+</head>
+
+<body>
+
+  <header>
+    <table>
+      <tr>
+
+        <td style="width: 10%;">
+          <a href="../index.html"><img src="../images/logo.png" alt="Logo" width="70"></a>
+
+        </td>
+
+        <td style="text-align: left;">
+          <a href="../index.html">Inicio</a> &emsp;&emsp;
+          <a href="etiquetas.html">Etiquetas</a>&emsp;&emsp;
+          <a href="atributos.html">Atributos</a>&emsp;&emsp;
+          <a href="css.html">CSS</a> &emsp;&emsp;
+          <a href="javascript.html">JavaScript</a>
+        </td>
+
+        <td style="text-align: right; width: 13%;">
+          <a href="contacto.html">Contacto</a>&emsp; &emsp;
+          <a href="acercade.html">Acerca de</a>
+        </td>
+        <hr>
+
+      </tr>
+    </table>
+
+  </header>
+  <main>
+    <hr>
+
+    <section>
+
+      <article>
+        <h1>Atributos HTML</h1>
+
+        <h2>Contenido</h2>
+
+        <ol>
+          <li><a href="#globales">Atributos globales</a>
+            <ul>
+              <li><a href="#globales-11">1.1 Atributos más usados</a></li>
+            </ul>
+          </li>
+          <br>
+
+          <li><a href="#form">Atributos del formulario (form)</a>
+            <ul>
+              <li><a href="#action">2.1 action</a></li>
+              <li><a href="#method">2.2 method</a></li>
+            </ul>
+          </li>
+          <br>
+
+          <li><a href="#input">Atributos del input</a></li>
+        </ol>
+      </article>
+      <hr>
+      <br>
+
+      <article id="globales">
+
+        <h2>Atributos globales</h2>
+
+        <p>
+          Los atributos globales pueden aplicarse a la mayoría de las etiquetas HTML,
+          excepto aquellas que pertenecen únicamente a la estructura del documento como
+          &lt;html&gt;, &lt;head&gt; y &lt;title&gt;. Estos atributos permiten agregar información,
+          comportamiento o estilo a cualquier elemento. Su uso facilita la organización del código
+          y la manipulación mediante JavaScript o CSS.
+        </p>
+
+        <h2 id="globales-11">1.1 Atributos globales más utilizados</h2>
+
+        <p>
+          <b>id:</b> Identificador único para un elemento. Solo puede existir un id con el mismo nombre en toda la
+          página.
+          Permite apuntar directamente al elemento desde CSS usando "#" o desde JavaScript con
+          <em>document.getElementById()</em>. Es fundamental para manipular contenido de forma precisa.
+        </p>
+
+        <p>
+          <b>class:</b> Permite agrupar elementos bajo un mismo nombre de clase. A diferencia del id, varios elementos
+          pueden
+          compartir la misma clase. Es ampliamente utilizado en CSS con el selector "." y en JavaScript con
+          <em>querySelectorAll()</em>. Facilita aplicar estilos o comportamientos en conjunto.
+        </p>
+
+      </article>
+
+      <hr><br><br>
+
+      <article id="form">
+
+        <h2>Atributos del formulario (form)</h2>
+
+        <p>
+          Los atributos del formulario controlan cómo se envían y procesan los datos ingresados por el usuario.
+          Estas configuraciones son esenciales para conectar HTML con aplicaciones, servidores o bases de datos.
+          Los atributos más comunes son “action” y “method”, los cuales determinan a dónde irán los datos y
+          la forma de enviarlos. Estos atributos permiten crear formularios funcionales y organizados.
+        </p>
+
+        <h2 id="action">2.1 action</h2>
+        <p>
+          El atributo <b>action</b> especifica la dirección o archivo donde se enviarán los datos del formulario.
+          Si está vacío, la información se envía a la misma página actual. Su función es conectar el formulario
+          con un servidor o script que procese la información enviada por el usuario.
+        </p>
+
+        <p>
+          Ejemplo:<br>
+          &lt;form action="procesar.php"&gt;
+        </p>
+
+        <h2 id="method">2.2 method</h2>
+        <p>
+          El atributo <b>method</b> define cómo se envían los datos al servidor. Existen dos métodos principales:
+          <b>GET</b> y <b>POST</b>. GET envía los datos visibles en la barra de dirección; es útil para búsquedas.
+          POST envía la información de forma oculta; se utiliza para datos privados o registros. Es esencial elegir
+          el método adecuado según el tipo de formulario.
+        </p>
+
+        <p>
+          Ejemplo:<br>
+          &lt;form method="post"&gt;
+        </p>
+
+      </article>
+
+      <hr><br><br>
+
+      <!-- SECCIÓN 3 -->
+      <article id="input">
+
+        <h2>Atributos del input</h2>
+
+        <p>
+          Los atributos del input permiten controlar cómo se comportan los campos del formulario. Cada atributo
+          añade características importantes como tipo de dato, texto guía, validación o restricciones. Estos
+          atributos garantizan que el usuario introduzca la información correctamente y que los formularios sean
+          más intuitivos. Son indispensables en cualquier formulario moderno.
+        </p>
+
+        <p>
+          <b>type:</b> Define el tipo de entrada que se usará como texto, número, correo, contraseña, fecha, archivo,
+          etc.
+          Este atributo determina qué tipo de dato se espera recibir e influye en la interfaz del campo.
+          Ejemplo: &lt;input type="email"&gt;
+        </p>
+
+        <p>
+          <b>placeholder:</b> Muestra un texto guía dentro del campo antes de escribir. Sirve como instrucción visual
+          para
+          explicar lo que debe ingresarse. Se borra automáticamente cuando el usuario comienza a escribir.
+          Ejemplo: &lt;input placeholder="Escribe tu nombre"&gt;
+        </p>
+
+        <p>
+          <b>required:</b> Indica que el campo debe ser completado obligatoriamente antes de enviar el formulario.
+          Es una forma simple de validar datos sin usar JavaScript. Si no se llena, el navegador mostrará un mensaje.
+          Ejemplo: &lt;input required&gt;
+        </p>
+
+        <p>
+          <b>name:</b> Asigna un nombre al campo, lo cual es necesario para que el servidor identifique el dato enviado.
+          Sin este atributo, un formulario no puede enviar correctamente esa información. Es clave en bases de datos.
+          Ejemplo: &lt;input name="usuario"&gt;
+        </p>
+
+      </article>
+
+    </section>
+  </main>
+
+  <hr>
+
+  <footer>
+    <Center>Footer Con Informacion...</Center>
+  </footer>
+
+</body>
+
+</html>
